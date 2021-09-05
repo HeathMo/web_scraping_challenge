@@ -2,14 +2,89 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>Mars Info</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-<h1>Latest Mars News</h1>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h3>Latest Mars News</h3>
+            <h5>{{mars_collection.news_title}}</h5>
+            <p>{{mars_collection.news_snip}}</p>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-sm-8">
+            <h3>Featured Mars Image</h3>
+            <img src="{{mars_collection.featured_image_url}}", class="img-fluid", alt="Featured Image">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="col-sm-12">
+        <h5>Mars Facts</h5>
+        {{mars_collection.mars_facts_html|safe}}
+    </div>
+
+    <br>
+    <br>
+
+    <div class="row text-center">
+        <div class="col-sm-12">
+            <h3>Mars Hemispheres</h3>
+        </div>
+    </div>
+
+    <hr>
+    <br>
+    <div class="row">
+        <img src="{{mars.hemisphere_image_urls[0]['cerb_url']}}" class="card-img-top">
+        <div class="card-body text-center">
+        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[0]['title']}}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="{{mars.hemisphere_image_urls[1]['schia_url']}}" class="card-img-top">
+        <div class="card-body text-center">
+        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[1]['title']}}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="{{mars.hemisphere_image_urls[2]['syrtis_url']}}" class="card-img-top">
+        <div class="card-body text-center">
+        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[2]['title']}}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="{{mars.hemisphere_image_urls[3]['valles_url']}}" class="card-img-top">
+        <div class="card-body text-center">
+        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[3]['title']}}</h5>
+        </div>
+    </div>
+
+    </div>
 
 
 
