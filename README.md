@@ -1,6 +1,6 @@
 # Mission to Mars via Web Scraping
 
-![rover](Images/mars_rover_nasa.png)
+![rover](Missions_to_Mars/Images/mars_rover_nasa.png)
 
 ## Background
 
@@ -12,3 +12,8 @@ Using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter we scraped 
 - Mars Facts from [Galaxy Facts](https://galaxyfacts-mars.com)
 - Mars Hemispheres from [GUSS](https://marshemispheres.com)
 
+### Step 2: MongoDB & Flask
+
+Using MongoDB with Flask, created an HTML `index.html` page to display information scraped from the internets.
+
+*Image of the website created*
