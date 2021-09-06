@@ -19,6 +19,7 @@ Using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter we scraped 
 Using MongoDB with Flask, created an HTML `index.html` page to display information scraped from the internets.
 
 *Images of the website created*
+
 [IMAGE 1 TBD]
 
 ![image2](Missions_to_Mars/Images/image2.png)
