@@ -4,6 +4,8 @@
 
 ## Background
 
+The objective of this assignment was to build a web application that scrapes for data related to Mission to Mars and displays the data on a single HTML page.
+
 ### Step 1: Scraping
 
 Using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter we scraped the internets for the following items:
@@ -16,4 +18,4 @@ Using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter we scraped 
 
 Using MongoDB with Flask, created an HTML `index.html` page to display information scraped from the internets.
 
-*Image of the website created*
+*Images of the website created*
