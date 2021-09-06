@@ -17,70 +17,75 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="scrape_mars.py" role="button">Scrape New Data</a></p>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
 
         </div>
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row text-center">
             <h3>Latest Mars News</h3>
-            <h5>{{mars_collection.news_title}}</h5>
-            <p>{{mars_collection.news_snip}}</p>
+            <h5>{{ mars_data.news_title }}</h5>
+            <p>{{ mars_data.news_snip }}</p>
         </div>
     </div>
     <hr>
     <br>
-    <div class="row">
-        <div class="col-sm-8">
+<!--couldn't get scrape from https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars-->
+        <div class="row text-center">
+            <div class="col-md-6 text-center">
             <h3>Featured Mars Image</h3>
-            <img src="{{mars_collection.featured_image_url}}", class="img-fluid", alt="Featured Image">
+            <img src="Images/mars1.png", class="img-fluid", alt="Featured Image">
+            </div>
         </div>
     </div>
 
     <br>
 
-    <div class="col-sm-12">
-        <h5>Mars Facts</h5>
-        {{mars_collection.mars_facts_html|safe}}
-    </div>
+        <div class="row text-center">
+            <div class="col-md-6 text-center">
+            <h5>Mars Facts</h5>
+            <img src="Images/mars_table.png">
+            </div>
+        </div>
+    </div>    
 
     <br>
     <br>
 
     <div class="row text-center">
-        <div class="col-sm-12">
-            <h3>Mars Hemispheres</h3>
-        </div>
+        <h3>Mars Hemispheres</h3>
     </div>
 
     <hr>
     <br>
-    <div class="row">
-        <img src="{{mars.hemisphere_image_urls[0]['cerb_url']}}" class="card-img-top">
-        <div class="card-body text-center">
-        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[0]['title']}}</h5>
-        </div>
-    </div>
+        <div class="row">
+            <div class="col col-3 col-md-6">
+                <h5 class="card-title">Cerberus</h5>
+                <img src="Images/cerberus.png" class="card-img-top">
+                <div class="card-body text-center">
+                </div>
+            </div>
 
-    <div class="row">
-        <img src="{{mars.hemisphere_image_urls[1]['schia_url']}}" class="card-img-top">
-        <div class="card-body text-center">
-        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[1]['title']}}</h5>
-        </div>
-    </div>
+            <div class="col col-3 col-md-6">
+                <h5 class="card-title">Schiaparelli</h5>
+                <img src="Images/schiaparelli.png" class="card-img-top">
+                <div class="card-body text-center">
+                </div>
+            </div>
 
-    <div class="row">
-        <img src="{{mars.hemisphere_image_urls[2]['syrtis_url']}}" class="card-img-top">
-        <div class="card-body text-center">
-        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[2]['title']}}</h5>
-        </div>
-    </div>
+            <div class="col col-3 col-md-6">
+                <h5 class="card-title">Syrtis</h5>
+                <img src="Images/syrtis.png" class="card-img-top">
+                <div class="card-body text-center">
+                </div>
+            </div>
 
-    <div class="row">
-        <img src="{{mars.hemisphere_image_urls[3]['valles_url']}}" class="card-img-top">
-        <div class="card-body text-center">
-        <h5 class="card-title">{{mars_collection.hemisphere_image_urls[3]['title']}}</h5>
+            <div class="col col-3 col-md-6">
+                <h5 class="card-title">Valles</h5>
+                <img src="Images/valles.png" class="card-img-top">
+                <div class="card-body text-center">
+                </div>
         </div>
     </div>
 

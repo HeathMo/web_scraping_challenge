@@ -1,6 +1,7 @@
 # Dependencies
 import time
 import json
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 from splinter import Browser
 from pprint import pprint
@@ -17,7 +18,7 @@ from flask import Flask, render_template
 
 
 def init_browswer():
-    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+    executable_path = {'executable_path': ChromeDriverManager().install()}
     return Browser('chrome', **executable_path, headless=False)
 
 def scrape():
